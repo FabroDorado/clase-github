@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* propiedades del contenedor */
+.contenedor{
+    
+    background-color: tomato;
+    display: grid;
+    /*filas*/
+    grid-template-rows: 250px 300px;
+
+    /*columnas*/
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+    gap: 10px;
+}
+
+
+
+/*propiedades de hijos*/
+
+.uno{
+background-color: burlywood;
+}
+
+.dos{
+background-color: brown;
+}
+
+.tres{
+background-color: wheat;
+}
+
+.cuatro{
+background-color: coral;
+}
+
+/*estilos de ejemplo*/
+
+.conteiner{
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.3fr;
+    grid-template-rows: 150px 300px 150px;
+
+    grid-template-areas: 
+    "header header header"
+    "main section section-dos"
+    "footer footer footer"
+
+    ;
+}
+
+.ejemplo{
+    background-color: thistle;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    justify-items: center;
+    align-items: center;
+}
+.img-uno{
+    justify-self: end;
+    align-self: start;
+}
+
+
+/*estilos ejemplos dos*/
+header{
+    background-color: chocolate;
+    grid-area: header;
+
+}
+main{
+    background-color: coral;
+    grid-area: main;
+}
+section{
+    background-color: cornflowerblue;
+    grid-area: section;
+}
+.section-dos{
+    background-color: darkgoldenrod;
+    grid-area: section-dos;
+}
+
+footer{
+    background-color: gold;
+    grid-area: footer;
+}
